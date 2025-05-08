@@ -2,33 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Scoped Variables */
-:root {
-  --primary: #ef4444;
-  --secondary: #3b82f6;
-  --muted-foreground: #6b7280;
-  --radius: 0.5rem;
+:host {
+  font-family: Arial, sans-serif;
+  scroll-behavior: smooth;
+  background-color: white;
+  color: black;
+  display: block;
+  padding: 1rem;
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --primary: #ef4444;
-    --secondary: #3b82f6;
-    --muted-foreground: #9ca3af;
+  :host {
+    background-color: #121212;
+    color: white;
   }
-}
-
-/* Scoped Styles inside Shadow DOM */
-:host {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: white;
-  color: black;
-  scroll-behavior: smooth;
-  display: block;
-  all: initial; /* Optional: resets inherited host styles */
-}
-
-:host-context(.dark) {
-  background-color: #121212;
-  color: white;
 }
